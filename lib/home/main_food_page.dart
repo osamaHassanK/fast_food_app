@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/Widget/smalltext.dart';
+import 'package:shop_app/Widget/textwidget.dart';
+import 'package:shop_app/home/food_page_body.dart';
 import 'package:shop_app/utilis/color.dart';
 
 class MainFoodPage extends StatefulWidget {
@@ -17,24 +20,33 @@ class _MainFoodPageState extends State<MainFoodPage> {
           padding: const EdgeInsets.all(8.0),
           child: Column(
              children:[
-               Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                 children: [
-                   Column( children: [
-                     Text("Bangladesh",style: TextStyle(color:AppColor.mainColor,fontSize: 18),),
-                     Text("shah Faisal",style: TextStyle(color: Colors.black,fontSize: 14),),
-                   ]),
-                   Container(
-                       height: 45,width: 45,
-                       decoration:BoxDecoration(color: AppColor.mainColor,
-                           borderRadius:BorderRadius.circular(12) ) ,
-                      child:Icon(Icons.search,color:Colors.white) ,
-                   )
-                 ],
+               Container(
+                 child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                   children: [
+                     Column( children: [
+                       BigText(text:'Pakistan',color: AppColor.mainColor),
+                       Row(
+                         children: [
+                           SmallText(text:'Shah faisal'),
+                           Icon(Icons.arrow_drop_down),
+                         ],
+                       ),
+
+                     ]),
+                     Container(
+                       height: 30,
+                         decoration:BoxDecoration(color: AppColor.mainColor,
+                             borderRadius:BorderRadius.circular(5) ) ,
+                        child:Icon(Icons.search,color:Colors.white) ,
+                     )
+                   ],
+                 ),
                ),
-             ],
+               FoodPageBody(), ],
           ),
         ),
+
       ),
     );
   }
