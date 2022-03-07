@@ -28,6 +28,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
                        BigText(text:'Pakistan',color: AppColor.mainColor),
                        Row(
                          children: [
+                           SizedBox(width: 12,),
                            SmallText(text:'Shah faisal'),
                            Icon(Icons.arrow_drop_down),
                          ],
@@ -35,10 +36,12 @@ class _MainFoodPageState extends State<MainFoodPage> {
 
                      ]),
                      Container(
-                       height: 30,
+                       margin:EdgeInsets.only(bottom: 5),
+                       height: 35.0,
+                         width: 35,
                          decoration:BoxDecoration(color: AppColor.mainColor,
-                             borderRadius:BorderRadius.circular(5) ) ,
-                        child:Icon(Icons.search,color:Colors.white) ,
+                             borderRadius:BorderRadius.circular(10) ) ,
+                        child:Icon(Icons.search,color:Colors.white),
                      )
                    ],
                  ),
